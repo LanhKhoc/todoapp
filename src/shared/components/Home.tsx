@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HomeComponent: React.SFC<{}> = () => {
   return (
-    <div>
+    <div className="o-grid">
       <img src={require("../assets/img/default_avatar.png")} />
       <Link to="/about">About</Link>
     </div>
