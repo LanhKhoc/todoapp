@@ -9,7 +9,7 @@ class App extends React.Component<{}, {}> {
     return (
       <Switch>
         <Route path="/about" render={(props) => {
-          return <Link to="/">Home</Link>
+          return <Link to="/">Back To Home</Link>
         }}/>
         <Route exact={true} path="/" component={Home} />
       </Switch>

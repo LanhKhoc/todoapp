@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
@@ -6,29 +8,34 @@ const extractSass = new ExtractTextPlugin({
 });
 
 module.exports = {
-  entry: __dirname + "/src/server/index.tsx",
+  entry: __dirname + "/src/client/index.tsx",
 
   output: {
     path: __dirname + "/dist",
-    filename: "server.js"
+    filename: "bundle.js"
   },
-
-  devtool: 'source-map',
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
   },
 
+  devtool: 'source-map',
+
+  devServer: {
+    port: 3000,
+    contentBase: __dirname,
+    hot: true
+  },
+
   plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html'
+    }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     extractSass
   ],
-
-  target: 'node',
-
-  node: {
-    fs: 'empty',
-    net: 'empty'
-  },
 
   module: {
     rules: [

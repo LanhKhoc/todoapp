@@ -13,6 +13,8 @@ module.exports = {
     filename: "bundle.js"
   },
 
+  devtool: 'source-map',
+
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
   },
