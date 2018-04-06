@@ -11,8 +11,8 @@
 Already logged into system
 
 #### Environment:
-- Device Name: Iphone 6
-- System Version: 11.0.0
+- Enviroment: Google Chrome
+- System Version: 65.0.3325.181 (Official Build) (64-bit)
 - Build: 1.0-25.01.2018 (1)
 
 #### Steps for proceduce:
@@ -34,4 +34,4 @@ https://drive.google.com/file/d/1zgzYUUl_uk4afx91vji34zo5XgxbbU7t/view?usp=shari
 - Chức năng login
 
 ### Design:
-- https://zpl.io/29l36ye""
+- https://zpl.io/29l36ye
