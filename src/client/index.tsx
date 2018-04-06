@@ -9,7 +9,7 @@ import App from "../shared/containers/App";
 import rootReducer from '../shared/reducers';
 
 // initialState
-const initialState = {}
+const initialState = {};
 
 // Create store
 const store = createStore(rootReducer, initialState);

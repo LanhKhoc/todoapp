@@ -46,17 +46,23 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [{
+        use: [
+          {
             loader: "style-loader"
-        }, {
-            loader: "css-loader", options: {
-                sourceMap: true
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true
             }
-        }, {
-            loader: "sass-loader", options: {
-                sourceMap: true
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
             }
-        }]
+          }
+        ]
       },
       {
         test: /\.(jpg|jpeg|gif|png|ico|ttf|otf|eot|svg|woff|woff2)(\?[a-z0-9]+)?$/,

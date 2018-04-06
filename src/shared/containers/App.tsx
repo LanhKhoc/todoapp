@@ -2,16 +2,13 @@ import * as React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
 import "../assets/scss/_main.scss";
-import Home from "./Home";
+import LoginMiddleware from "../middlewares/LoginMiddleware";
 
 class App extends React.Component<{}, {}> {
   render() {
     return (
       <Switch>
-        <Route path="/about" render={(props) => {
-          return <Link to="/">Back To Home</Link>
-        }}/>
-        <Route exact={true} path="/" component={Home} />
+        <LoginMiddleware path="/" component={Home} />
       </Switch>
     );
   }
